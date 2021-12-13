@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+// JSX
 function App() {
-  return React.createElement('div', null, [
-    React.createElement('h1', { style: { color: 'red' }}, 'My Profile.'),
-    React.createElement('p', null, 'My name is Mike Huang.'),
-    React.createElement('button', null, 'Check my profile.')
-  ])
+  return (
+    <div>
+      <h1>My Profile</h1>  
+      <p>My name is Steven Ko</p>
+      <button>Check my profile.</button>
+    </div>
+  )
 }
 
 ReactDOM.render(App(), document.querySelector('#root'))
