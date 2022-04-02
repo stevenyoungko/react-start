@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/style.css'
 import Friend from './Friend'
 
@@ -18,6 +18,11 @@ const App = () => {
     alert(msg)
   }
 
+  let [patName, setName] = useState('Dog')
+  const changePatNameHandler = () => {
+    setName('Cat')
+  }
+
   return (
     <div>
       <h1 style={{ fontSize: '20px', backgroundColor: 'black' }}>
@@ -29,7 +34,6 @@ const App = () => {
       ))}
       <hr />
 
-
       <div>
         <from action="">
           <input type="text" />
@@ -38,6 +42,12 @@ const App = () => {
         
         {/* 一般button要包 arrow func 不然會先被觸發 */}
         <button onClick={() => {buttonHandler2('123')}}>Submit2</button>
+      </div>
+
+      <hr />
+      <div>
+        <h1>{patName}</h1>
+        <button onClick={changePatNameHandler}>Change Name</button>
       </div>
     </div>
   )
